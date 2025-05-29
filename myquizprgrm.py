@@ -1,39 +1,46 @@
-def run_quiz(questions):
-    score = 0
-    for question in questions:
-        print("\n" + question["question"])
-        for option in question["options"]:
-            print(option)
-        answer = input("Your answer (A/B/C/D): ").strip().upper()
-        if answer == question["answer"]:
-            print("✅ Correct!")
-            score += 1
-        else:
-            print(f"❌ Wrong. The correct answer was {question['answer']}.")
-    print(f"\n🎉 You got {score} out of {len(questions)} correct.")
+import turtle
 
-questions = [
-    {
-        "question": "What is the capital of France?",
-        "options": ["A. Berlin", "B. Madrid", "C. Paris", "D. Rome"],
-        "answer": "C"
-    },
-    {
-        "question": "Which language is used for web apps?",
-        "options": ["A. Python", "B. Java", "C. HTML", "D. All of the above"],
-        "answer": "D"
-    },
-    {
-        "question": "Who developed Python?",
-        "options": ["A. Dennis Ritchie", "B. Guido van Rossum", "C. James Gosling", "D. Linus Torvalds"],
-        "answer": "B"
-    },
-    {
-        "question": "What does CPU stand for?",
-        "options": ["A. Central Process Unit", "B. Computer Personal Unit", "C. Central Processing Unit", "D. Control Processing Unit"],
-        "answer": "C"
-    }
-]
+# Initialize the turtle
+screen = turtle.Screen()
+screen.bgcolor("white")
+pen = turtle.Turtle()
+pen.speed(5)
 
-if __name__ == "__main__":
-    run_quiz(questions)
+# Draw the bird's body
+pen.penup()
+pen.goto(-50, -50)
+pen.pendown()
+pen.circle(50)
+
+# Draw the head
+pen.penup()
+pen.goto(20, 20)
+pen.pendown()
+pen.circle(30)
+
+# Draw the beak
+pen.penup()
+pen.goto(50, 30)
+pen.pendown()
+pen.goto(70, 40)
+pen.goto(50, 45)
+pen.goto(50, 30)
+
+# Draw wings
+pen.penup()
+pen.goto(-50, 0)
+pen.pendown()
+pen.goto(-100, 50)
+pen.goto(-50, 50)
+pen.goto(-50, 0)
+
+# Draw tail
+pen.penup()
+pen.goto(-50, -50)
+pen.pendown()
+pen.goto(-80, -80)
+pen.goto(-50, -70)
+
+# Hide turtle and display window
+pen.hideturtle()
+turtle.done()
