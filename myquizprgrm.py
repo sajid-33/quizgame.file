@@ -1,4 +1,2 @@
-name = input("What is your name? ")
-
-# Print a greeting
-print("Hello, " + name + "! Nice to meet you.")
+print("What is your name? ")
+print("Hello, " + sajid + "! Nice to meet you.")
