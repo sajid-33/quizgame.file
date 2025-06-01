@@ -1,6 +1,7 @@
-from datetime import datetime
+# Simple greeting program
 
-# Get current time
-current_time = datetime.now().strftime("%H:%M:%S")
+# Ask for the user's name
+name = input("What is your name? ")
 
-print("Current Time:", current_time)
+# Print a greeting
+print("Hello, " + name + "! Nice to meet you.")
